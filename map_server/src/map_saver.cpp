@@ -48,7 +48,7 @@ class MapGenerator
     {
       ros::NodeHandle n;
       ROS_INFO("Waiting for the map");
-      map_sub_ = n.subscribe("map", 1, &MapGenerator::mapCallback, this);
+      map_sub_ = n.subscribe("map_merge/map", 1, &MapGenerator::mapCallback, this);
     }
 
     void mapCallback(const nav_msgs::OccupancyGridConstPtr& map)
