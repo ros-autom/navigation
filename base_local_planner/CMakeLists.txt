@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(base_local_planner)
-
+set(CMAKE_CXX_FLAGS "-Wno-deprecated-declarations ${CMAKE_CXX_FLAGS}")
 find_package(catkin REQUIRED
         COMPONENTS
             cmake_modules
